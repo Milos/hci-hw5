@@ -1,0 +1,12 @@
+var xhReq = new XMLHttpRequest();
+xhReq.open("GET", url, false);
+xhReq.send(null);
+var jsonObject = JSON.parse(xhReq.responseText);		
+document.getElementById('date').innerHTML = jsonObject.Released;
+document.getElementById('director').innerHTML = jsonObject.Director;
+document.getElementById('time').innerHTML = jsonObject.Runtime;
+document.getElementById('awards').innerHTML = jsonObject.Awards;
+document.getElementById('cast').innerHTML = jsonObject.Actors;
+document.getElementById('imdbRating').innerHTML = jsonObject.imdbRating;
+document.getElementById('title').innerHTML = jsonObject.Title;
+document.getElementById('plot').innerHTML = jsonObject.Plot;

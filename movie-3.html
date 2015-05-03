@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:800,500' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<title>Pulp Fiction</title>
+</head>
+
+<body id="movie">
+	<header id="poster">
+		<a class="back" href="index.html">&larr; Back</a>
+		<h1 id="title"></h1>
+	</header>
+	<section class="general-info">
+		<div class="trailer">
+			<iframe src="https://www.youtube.com/embed/s7EdQ4FqbhY?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+			height="100%" frameborder="0" allowfullscreen></iframe>
+		</div>
+
+		<div class="about">
+			<div class="rating-wrapper">
+				<div class="rating">
+					<span class="full">☆</span><span class="full">☆</span><span class="full">☆</span><span class="full">☆</span><span class="half">☆</span>
+				</div><span id="imdbRating"></span>
+			</div>
+			<div class="list">
+				<ul>
+					<li><strong>Release date:</strong> <span id="date"></span></li>
+					<li><strong>Director:</strong> <span id="director"></span></li>
+					<li><strong>Running Time:</strong> <span id="time"></span></li>
+					<li><strong>Awards:</strong> <span id="awards"></span></li>
+					<li><strong>Cast: </strong><span id="cast"></span></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<article>
+		<p id="plot"></p>
+	</article>	
+	<script>
+		document.getElementById('poster').style.backgroundImage = 'url(images/bg3.jpg)';
+		var url = "http://www.omdbapi.com/?t=pulp+fiction&y=&plot=full&r=json";		
+	</script>
+	<script src="js/movie.js"></script>
+</body>
+</html>
